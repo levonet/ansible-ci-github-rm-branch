@@ -1,0 +1,7 @@
+---
+ci_github_api: https://api.github.com
+ci_github_username:
+ci_github_password:
+ci_github_owner:
+ci_github_repo:
+ci_github_ref:

@@ -1,0 +1,11 @@
+---
+- name: Delete Github brunch {{ ci_github_ref }}
+  uri:
+    url: "{{ ci_github_api }}/repos/{{ ci_github_owner }}/{{ ci_github_repo }}/git/refs/{{ ci_github_ref }}"
+    headers:
+      Accept: application/vnd.github.inertia-preview+json
+    method: DELETE
+    user: '{{ ci_github_username }}'
+    password: '{{ ci_github_password }}'
+    force_basic_auth: yes
+    status_code: 204

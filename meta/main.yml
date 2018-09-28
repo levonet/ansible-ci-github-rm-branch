@@ -1,0 +1,36 @@
+---
+galaxy_info:
+  role_name: ci_github_rm_branch
+  author: Pavlo Bashynskyi
+  description: Remove branch from github repository.
+  license: MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: opensuse
+      versions:
+        - all
+    - name: SLES
+      versions:
+        - all
+    - name: MacOSX
+      versions:
+        - all
+  cloud_platforms: []
+  galaxy_tags: 
+   - ci
+   - cd
+   - github
+
+dependencies: []
