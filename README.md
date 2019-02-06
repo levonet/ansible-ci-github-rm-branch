@@ -10,6 +10,7 @@ This role is useful in CI pipeline after merging Pull Request.
 - `ci_github_owner` (required): Github owner or organisation name.
 - `ci_github_repo` (required): Github project repository name.
 - `ci_github_ref` (required): Github ref name.
+- `ci_github_ignore_error` (default: yes): Ignore any errors.
 
 ## Example Playbook
 
@@ -22,7 +23,7 @@ This role is useful in CI pipeline after merging Pull Request.
     ci_github_password: secret
     ci_github_owner: myorg
     ci_github_repo: myapp
-    ci_github_branch: "{{ github_ref }}"
+    ci_github_ref: "heads/{{ github_branch }}"
   roles:
     - role: levonet.ci_github_rm_branch
 ```
@@ -30,7 +31,7 @@ This role is useful in CI pipeline after merging Pull Request.
 And run in Jenkins:
 
 ```bash
-ansible-playbook myplaybook.yml -e github_ref="heads/${X_GH_BRANCH}"
+ansible-playbook myplaybook.yml -e github_branch="${X_GH_BRANCH}"
 ```
 
 ## License

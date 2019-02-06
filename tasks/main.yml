@@ -9,3 +9,4 @@
     password: '{{ ci_github_password }}'
     force_basic_auth: yes
     status_code: 204
+  ignore_errors: "{{ ci_github_ignore_error }}"
